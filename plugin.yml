@@ -1,0 +1,9 @@
+name: CartRemover
+main: plugins.astro.cartremover.RemoveCarts
+version: 1.0
+author: Astro
+depend: [WorldEdit]
+commands:
+  removecarts:
+    description: Removes carts.
+    usage: /<command> args
