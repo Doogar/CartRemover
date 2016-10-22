@@ -18,9 +18,6 @@ import com.sk89q.worldedit.bukkit.selections.Selection;
 
 public class RemoveCarts extends JavaPlugin implements Listener
 {
-	public static Plugin instance;
-	public static RemoveCarts plugin;
-
 	@Override
 	public void onEnable()
 	{
@@ -29,14 +26,19 @@ public class RemoveCarts extends JavaPlugin implements Listener
 
 		PluginManager pm = Bukkit.getPluginManager();
 		pm.registerEvents(this, this);
-		instance = this;
 	}
 
 	public WorldEditPlugin getWorldEdit()
 	{
 		Plugin p = Bukkit.getServer().getPluginManager().getPlugin("WorldEdit");
-		if (p instanceof WorldEditPlugin) return (WorldEditPlugin) p;
-		else return null;
+		if (p instanceof WorldEditPlugin) 
+                {
+                     return (WorldEditPlugin) p;
+                }
+		else 
+                {
+                     return null;
+                }
 	}
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) 
