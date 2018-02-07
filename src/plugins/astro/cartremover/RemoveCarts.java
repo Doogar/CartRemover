@@ -7,7 +7,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Minecart;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -16,18 +15,8 @@ import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 import com.sk89q.worldedit.bukkit.selections.Selection;
 
 
-public class RemoveCarts extends JavaPlugin implements Listener
+public class RemoveCarts extends JavaPlugin
 {
-	@Override
-	public void onEnable()
-	{
-		super.onEnable();
-		plugin = this;
-
-		PluginManager pm = Bukkit.getPluginManager();
-		pm.registerEvents(this, this);
-	}
-
 	public WorldEditPlugin getWorldEdit()
 	{
 		Plugin p = Bukkit.getServer().getPluginManager().getPlugin("WorldEdit");
